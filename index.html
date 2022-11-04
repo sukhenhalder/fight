@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grids</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 550px;
+            width: 1050px;
+            margin: auto auto;
+            border: 1px solid black;
+            background-color: rgb(143, 110, 67);
+            
+            display: grid;
+            grid-template-rows: repeat(1, 450px);
+            grid-template-columns: repeat(3, 2fr);
+            grid-gap: 15px;
+        }
+
+        .box1 {
+
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            border: 1px solid black;
+            background-color: white;
+
+        }
+
+        .box2 {
+
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            border: 1px solid rgb(218, 12, 12);
+            background-color: white;
+        }
+
+        .box3 {
+
+
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            border: 1px solid rgb(218, 180, 12);
+            background-color: white;
+        }
+
+        .t1,
+        .v1,
+        .m1 {
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: 10px auto;
+            border-style: dotted;
+            box-shadow: 5px 5px 5px yellow;
+            background-size: cover;
+        }
+
+        .t1 {
+            background-image: url(https://qph.cf2.quoracdn.net/main-qimg-264fc74a9b4ef9c46f30b46e9a8e39ff-lq);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .v1 {
+            background-image: url(https://pbs.twimg.com/profile_images/1366466342354751491/JyhZpbtu_400x400.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .m1 {
+            background-image: url(https://play-lh.googleusercontent.com/iSxPiIZWr1YtL4iAmL5hLoXFXDBFq5qXfbDEhKIUdRN8Bq42Bg5h5grXvOLWSpD68t4);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+
+        .t2,
+        .m2,
+        .v2 {
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 5px 5px;
+        }
+
+        .t2 {
+            background-image: url(https://thumbs.gfycat.com/PlainFriendlyFowl-size_restricted.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .m2 {
+            background-image: url(https://i.pinimg.com/originals/fd/0c/35/fd0c350027c229eb7f77a17e73cc8df8.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .v2 {
+            background-image: url(https://i.pinimg.com/originals/3b/3b/c5/3b3bc5997eb0b5ced64550ede2a83e4c.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .t3,
+        .m3,
+        .v3 {
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+        }
+
+        .t4,
+        .k4,
+        .v4 {
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-gap: 150px;
+            margin-top: 50px;
+            margin: 10px auto;
+
+
+        }
+
+        .t4 {
+            background-image: url(https://i.makeagif.com/media/9-27-2017/5-Y9Fi.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .k4 {
+            background-image: url(https://i.makeagif.com/media/9-27-2017/5-Y9Fi.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .v4 {
+            background-image: url(https://i.makeagif.com/media/9-27-2017/5-Y9Fi.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .f1,
+        .a1,
+        .b1 {
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 5px 5px;
+        }
+
+        .f1 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZU4mj0GcknU-sLBxuc_PhByVP_rUIS_NwuQ&usqp=CAU);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .a1 {
+            background-image: url(https://i.pinimg.com/474x/da/3a/24/da3a244b2465d191a57ca84d381fdd2e.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .b1 {
+            background-image: url(https://c4.wallpaperflare.com/wallpaper/409/952/920/dragon-ball-z-son-goku-portrait-display-wallpaper-preview.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .f2,
+        .a2,
+        .b2 {
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 5px 5px;
+        }
+
+        .f2 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTkM_UUafk08t-icjBMqa0cVrSYC8BClKO4A&usqp=CAU);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .a2{
+            background-image: url(https://assets2.ignimgs.com/2016/09/29/one-punch-man-poster2jpg-fe1704.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .b2{
+            background-image: url(https://images.hdqwalls.com/download/dragon-ball-z-goku-6r-1600x1200.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .f3,
+        .a3,
+        .b3 {
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 5px 5px;
+        }
+
+        .f3 {
+            background-image: url(https://f.i.uol.com.br/fotografia/2021/02/18/1613671083602eaaab101f1_1613671083_3x2_md.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .a3{
+            background-image: url(https://i.pinimg.com/736x/d1/77/6c/d1776c5ef1ca6e0010a0a121a49fde6b.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .b3{
+            background-image: url(https://w0.peakpx.com/wallpaper/471/978/HD-wallpaper-goku-ssg-ssgss-dragon-ball-dragon-ball-super-dragon-ball-z-super-saiyan-blue-super-saiyan-god.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .f4,
+        .a4,
+        .b4 {
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 5px 5px;
+        }
+
+        .f4 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_36x3eRX-G6GkpTBFZVfrv67wfZ6z1_tawQ&usqp=CAU);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .a4{
+            background-image: url(https://thefandom.net/wp-content/uploads/2020/04/one-punch-man-featured.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .b4{
+            background-image: url(https://preview.redd.it/8ptoqhrivsb41.jpg?auto=webp&s=11b5119ddaf7410729ffd5acf3296207d5143f7c);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .g1 {
+            border: 1px solid black;
+            height: 25px;
+            width: 85px;
+            border-radius: 20px;
+            border-radius: 20px;
+            text-align: center;
+            background-color: rgb(124, 55, 55);
+            margin-top: 50px;
+        }
+
+        .g2 {
+            border: 1px solid black;
+            height: 25px;
+            width: 85px;
+            border-radius: 20px;
+            text-align: center;
+            background-color: rgb(107, 47, 47);
+            margin-top: 50px;
+        }
+
+        .r {
+            height: 20px;
+            width: 80px;
+            background-color: rgb(73, 8, 8);
+            color: chartreuse;
+            border-radius: 50px;
+        }
+
+        .l {
+            height: 20px;
+            width: 80px;
+            background-color: rgb(82, 8, 8);
+            color: chartreuse;
+            border-radius: 50px;
+
+        }
+
+        .heading {
+            margin-top: 45px;
+            border: 2px solid black;
+            height: 80px;
+            width: 300px;
+            margin-left: 800px;
+            border-radius: 20px;
+            padding-left: 18px;
+            box-shadow: 5px 5px 5px rgb(122, 163, 175);
+            background-color: black;
+            color: white;
+            text-shadow: 2px 2px 5px white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Fighting Cards</h1>
+    </div>
+    <br>
+    <br>
+
+    <div class="container">
+
+        <div class="box1">
+            <div class="t1"></div>
+            <div class="t2"></div>
+            <div class="t3">
+                <div class="f1"></div>
+                <div class="f2"></div>
+                <div class="f3"></div>
+                <div class="f4"></div>
+            </div>
+            <div class="t4">
+                <div class="g1"><button class="l">Left</button></div>
+                <div class="g2"><button class="r">right</button></div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="m1"></div>
+            <div class="m2"></div>
+            <div class="m3">
+                <div class="a1"></div>
+                <div class="a2"></div>
+                <div class="a3"></div>
+                <div class="a4"></div>
+            </div>
+            <div class="k4">
+                <div class="g1"><button class="l">Left</button></div>
+                <div class="g2"><button class="r">right</button></div>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="v1"></div>
+            <div class="v2"></div>
+            <div class="v3">
+                <div class="b1"></div>
+                <div class="b2"></div>
+                <div class="b3"></div>
+                <div class="b4"></div>
+            </div>
+            <div class="v4">
+                <div class="g1"><button class="l">Left</button></div>
+                <div class="g2"><button class="r">right</button></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
